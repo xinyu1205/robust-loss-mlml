@@ -31,10 +31,10 @@ We construct the training sets of missing labels by randomly dropping positive l
 
 |          |samples | classes | Labels | avg. label/img |File |
 |----------|:----:|:---:|:---:|:---:|:---:|
-|  COCO-full labels| 82,081 | 80   | 241,035 |  2.9  |[coco_train_full.txt](./src/dataset/coco_train_full.txt) |
-|  COCO-75% labels left     | 82,081 | 80   | 181,422   |  2.2  | [coco_train_0.75left.txt](./src/dataset/coco_train_0.75left.txt) |
-|  COCO-40% labels left          | 82,081 | 80 | 96,251   |  1.2  | [coco_train_0.4left.txt](./src/dataset/coco_train_0.4left.txt) |
-|  COCO-single label         | 82,081 | 80 | 82,081   |  1.0  | [coco_train_singlebale.txt](./src/dataset/coco_train_singlelabel.txt) |
+|  COCO-full labels| 82,081 | 80   | 241,035 |  2.9  |[coco_train_full.txt](./dataset/coco_train_full.txt) |
+|  COCO-75% labels left     | 82,081 | 80   | 181,422   |  2.2  | [coco_train_0.75left.txt](./dataset/coco_train_0.75left.txt) |
+|  COCO-40% labels left          | 82,081 | 80 | 96,251   |  1.2  | [coco_train_0.4left.txt](./dataset/coco_train_0.4left.txt) |
+|  COCO-single label         | 82,081 | 80 | 82,081   |  1.0  | [coco_train_singlelabel.txt](./dataset/coco_train_singlelabel.txt) |
 
 
 ## Loss Implementation
