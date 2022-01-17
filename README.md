@@ -60,7 +60,7 @@ For example:
 ```python
 python train.py --loss Hill --data '/home/MSCOCO_2014/' --dataset './dataset/coco_train_0.4left.txt'
 ```
-
+Note that when SPLC is used on COCO-75% labels left, the threshold is set 0.65, and the parameters in other cases are set by default.
 
 ## Validation Code
 We provide validation code that reproduces results reported in the paper on MS-COCO:
