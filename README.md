@@ -45,7 +45,7 @@ implementations of our loss functions: `Hill` and `SPLC`. The loss functions tak
 - ```class SPLC(nn.Module)```
 
 ## Training Code
-Training model by selecting different losses:
+Training models by selecting different losses:
 
 ```python
 python train.py --loss Hill --data {path to dataset} --dataset {select training dataset}
