@@ -35,6 +35,9 @@ We construct the training sets of missing labels by randomly dropping positive l
 |  COCO-75% labels left     | 82,081 | 80   | 181,422   |  2.2  | [coco_train_0.75left.txt](./dataset/coco_train_0.75left.txt) |
 |  COCO-40% labels left          | 82,081 | 80 | 96,251   |  1.2  | [coco_train_0.4left.txt](./dataset/coco_train_0.4left.txt) |
 |  COCO-single label         | 82,081 | 80 | 82,081   |  1.0  | [coco_train_singlelabel.txt](./dataset/coco_train_singlelabel.txt) |
+|  NUS-full label         | 119,103 | 81 | 289,460   |  2.4  | [nus_train_full.txt](./dataset/nus_train_full.txt) |
+|  NUS-single label         | 119,103 | 81 | 289,460   |  1.0  | [nus_train_singlelabel.txt](./dataset/nus_train_singlelabel.txt) |
+
 
 
 ## Loss Implementation
@@ -45,14 +48,14 @@ implementations of our loss functions: `Hill` and `SPLC`. The loss functions tak
 - ```class SPLC(nn.Module)```
 
 ## Training Code
-Training models by selecting different losses:
+Training models by selecting different losses on MS-COCO:
 
 ```python
-python train.py --loss Hill --data {path to dataset} --dataset {select training dataset}
+python train.py --loss Hill --data {path to MS-COCO} --dataset {select training dataset}
 ```
 
 ```python
-python train.py --loss SPLC --data {path to dataset} --dataset {select training dataset}
+python train.py --loss SPLC --data {path to MS-COCO} --dataset {select training dataset}
 ```
 
 For example:
@@ -61,6 +64,16 @@ For example:
 python train.py --loss Hill --data '/home/MSCOCO_2014/' --dataset './dataset/coco_train_0.4left.txt'
 ```
 Note that when SPLC is used on COCO-75% labels left, the threshold is set 0.65, and the hyperparameters in other cases are set by default.
+
+Training models by selecting different losses on NUS-wide:
+
+```python
+python train_nus.py --loss Hill --data {path to NUS-wide}
+```
+
+```python
+python train_nus.py --loss SPLC --data {path to NUS-wide} 
+```
 
 ## Validation Code
 We provide validation code that reproduces results reported in the paper on MS-COCO:
