@@ -41,7 +41,7 @@ We construct the training sets of missing labels by randomly dropping positive l
 
 
 ## Loss Implementation
-In this PyTorch [file](/src/loss_functions/losses.py), we provide 
+In this PyTorch [file](./src/loss_functions/losses.py), we provide 
 implementations of our loss functions: `Hill` and `SPLC`. The loss functions take `logits` (predicted logits before sigmoid) and `targets` as input, and return the loss. Note that `SPLC` also takes current training epoch as input.     
 
 - ```class Hill(nn.Module)```
